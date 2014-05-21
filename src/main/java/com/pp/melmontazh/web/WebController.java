@@ -11,4 +11,10 @@ public class WebController {
 		return "about";
 		
 	}
+	
+	@RequestMapping(value="/uploadimg", method = RequestMethod.GET)
+	public String uploadimg(){
+		return "uploadimg";
+		
+	}
 }
