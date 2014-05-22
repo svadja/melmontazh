@@ -15,8 +15,8 @@ public class TestDomain {
     private String name;
     
 
-	public TestDomain(long id, String name) {
-		this.id = id;
+	public TestDomain(String name) {
+		
 		this.name = name;
 	}
 	public long getId() {

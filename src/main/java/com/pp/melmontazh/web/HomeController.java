@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.pp.melmontazh.dao.DAO;
+import com.pp.melmontazh.dao.DAOImpl;
 import com.pp.melmontazh.domain.TestDomain;
+import com.pp.melmontazh.service.TestService;
+import com.pp.melmontazh.service.TestServiceImpl;
 
 /**
  * Handles requests for the application home page.
@@ -22,12 +25,8 @@ import com.pp.melmontazh.domain.TestDomain;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-	
-    @Autowired
-    private DAO daoI;
-	
-	
+	@Autowired
+	private TestService testService;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -49,7 +48,8 @@ public class HomeController {
 	
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public void testc(){
-		//daoI.saveOrUpdate(new TestDomain(10,"test"));
+		TestDomain td = new TestDomain("Boom1");
+		testService.save(td);
 		
 	}
 	
