@@ -16,6 +16,7 @@ public class Contact {
     private String address;
     private String phone;
     private String about;
+    private String img;
 	public long getId() {
 		return id;
 	}
@@ -45,6 +46,12 @@ public class Contact {
 	}
 	public void setAbout(String about) {
 		this.about = about;
+	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
 	}
     
 }

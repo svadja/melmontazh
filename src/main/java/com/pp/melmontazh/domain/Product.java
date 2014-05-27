@@ -16,7 +16,7 @@ public class Product {
     private String description;
     private String img;
     private String price;
-    private long count;
+    private long cnt;
     private boolean existence;
 	public long getId() {
 		return id;
@@ -48,11 +48,11 @@ public class Product {
 	public void setPrice(String price) {
 		this.price = price;
 	}
-	public long getCount() {
-		return count;
+	public long getCnt() {
+		return cnt;
 	}
-	public void setCount(long count) {
-		this.count = count;
+	public void setCnt(long cnt) {
+		this.cnt = cnt;
 	}
 	public boolean isExistence() {
 		return existence;
