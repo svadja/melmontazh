@@ -11,11 +11,15 @@ import com.pp.melmontazh.dao.DAO;
 import com.pp.melmontazh.domain.Contact;
 import com.pp.melmontazh.domain.Product;
 import com.pp.melmontazh.domain.Service;
+import com.pp.melmontazh.service.ContentService;
 
 @Controller
 public class WebController {
 	@Autowired
 	private DAO daoI;
+	
+	@Autowired
+	private ContentService contentService;
 	
 	@RequestMapping(value="/about", method = RequestMethod.GET)
 	public String about(){
@@ -28,6 +32,15 @@ public class WebController {
 		return "uploadimg";
 		
 	}
+	
+	
+	@RequestMapping(value="/products", method = RequestMethod.GET)
+	public String showProducts(Model m){
+		m.addAttribute("products", contentService.getAll(Product.class) );
+		return "products";
+	}
+	
+	
 	/*---Product---*/
 	@RequestMapping(value="/eProduct", method = RequestMethod.GET)
 	public String loadEditorProduct(Model m){
