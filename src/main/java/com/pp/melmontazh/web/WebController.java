@@ -34,14 +34,25 @@ public class WebController {
 	}
 	
 	
+
+	
+	
+	/*--Home--*/
+	@RequestMapping(value = {"/","/home"}, method = RequestMethod.GET)
+	public String home(Model model) {
+		return "home";
+	}
+
+	/*--END Home--*/
+	
+	
+	/*---Product---*/
 	@RequestMapping(value="/products", method = RequestMethod.GET)
 	public String showProducts(Model m){
 		m.addAttribute("products", contentService.getAll(Product.class) );
 		return "products";
 	}
 	
-	
-	/*---Product---*/
 	@RequestMapping(value="/eProduct", method = RequestMethod.GET)
 	public String loadEditorProduct(Model m){
 		m.addAttribute("product",new Product());

@@ -1,0 +1,145 @@
+/*
+Main style
+version 0.0.1
+*/
+@IMPORT url("reset_style.css");
+/*General Style*/
+html {
+	height: 100%
+}
+
+body {
+	background: #d8d8d8;
+	font-family: Georgia, Arial, Helvetica, sans-serif;
+	color: #4f5259;
+	font-size: 14px;
+	min-height: 100%;
+}
+
+p {
+	font-size: 14px;
+	color: #4f5259;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+}
+
+a:HOVER {
+	text-decoration: underline;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+}
+
+/*-Fon-*/
+#fon_bottom,#fon_top {
+	background: #ccc;
+}
+
+#fon_top {
+	height: 140px;
+}
+
+#fon_bottom {
+	height: 50px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	right: 0;
+}
+
+/*-Container-*/
+#container {
+	width: 960px;
+	background: #fff;
+	margin: 20px auto 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/*--Header--*/
+#header {
+	height: 120px;
+	background: #3a2c28;
+}
+/*Logo*/
+#logo {
+	float: left;
+	width: 480px;
+	height: 140px;
+}
+
+#logo img {
+	margin: 20px 0 0 45px;
+}
+
+/*Top info*/
+#top_info {
+	height: 37px;
+}
+
+#top_info img {
+	float: left;
+	margin: 20px 0 0 240px;
+}
+
+#top_info ul {
+	color: #fff;
+	float: left;
+	margin: 20px 0 0 5px;
+}
+
+/*Navbar*/
+#navbar ul {
+	float: left;
+	margin: 20px 0 0 40px;
+}
+
+#navbar ul li {
+	float: left;
+	padding-left: 20px;
+}
+
+#navbar a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	font-size: 16px;
+}
+
+#navbar a:HOVER {
+	text-decoration: underline;
+	outline: none;
+	color: #fff;
+	font-size: 16px;
+}
+
+#navbar a.selectedmenu {
+	text-decoration: underline;
+	outline: none;
+	color: #fff;
+	font-size: 16px;
+}
+
+/*--Content_area--*/
+#content_area {
+	margin: 20px 15px;
+}
+
+/*--Footer*/
+#footer {
+	height: 30px;
+	background: url("../img/bottom_fon.gif") repeat;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
