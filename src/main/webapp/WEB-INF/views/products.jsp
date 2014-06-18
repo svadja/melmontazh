@@ -6,12 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 	<jsp:include page="include_top_page.jsp" />
 	<script type="text/javascript">
-		document.getElementById("nav3").className = "selectedmenu";
+	$("#nav3").addClass("selectedmenu");
 	</script>
 	<!-- Contant -->
 	<div id="content_area">
