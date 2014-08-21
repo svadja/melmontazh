@@ -34,7 +34,6 @@ a:HOVER {
 	color: #fff;
 	font-size: 14px;
 }
-
 /*-Fon-*/
 #fon_bottom,#fon_top {
 	background: #ccc;
@@ -74,7 +73,6 @@ a:HOVER {
 #logo {
 	float: left;
 	width: 480px;
-	height: 140px;
 }
 
 #logo img {
@@ -82,10 +80,6 @@ a:HOVER {
 }
 
 /*Top info*/
-#top_info {
-	height: 37px;
-}
-
 #top_info img {
 	float: left;
 	margin: 20px 0 0 240px;
@@ -121,19 +115,75 @@ a:HOVER {
 	color: #fff;
 	font-size: 16px;
 }
-
-#navbar a.selectedmenu {
-	text-decoration: underline;
-	outline: none;
-	color: #fff;
-	font-size: 16px;
-}
-
 /*--Content_area--*/
 #content_area {
 	margin: 20px 15px;
 }
 
+/*Category*/
+#category_div {
+	height: 30px;
+}
+
+#category_div ul {
+	
+}
+
+#category li {
+	float: left;
+	padding-left: 10px;
+}
+
+#category a {
+	color: #4f5259;
+	font-size: 18px;
+}
+
+/*List S&P*/
+#list_SandP_div {
+	padding-left: 10px;
+}
+
+#list_SandP_div li {
+	padding: 15px 0px;
+	position: relative;
+	height: 120px;
+}
+
+#l_image {
+	float: left;
+	width: 120px;
+	padding: 0px 20px 0px 0px;
+	text-align: center;
+}
+
+#l_image img {
+	height: 120px;
+	width: 120px;
+}
+
+#l_info {
+	
+}
+
+/*Paginator*/
+.page_navigation {
+	padding-bottom: 10px;
+}
+
+.page_navigation a {
+	padding: 3px 5px;
+	margin: 2px;
+	color: white;
+	text-decoration: none;
+	float: left;
+	font-size: 12px;
+	background-color: #3a2c28;
+}
+.active_page{
+	background-color:white !important;
+	color:black !important;
+}
 /*--Footer*/
 #footer {
 	height: 30px;

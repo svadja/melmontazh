@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.pp.melmontazh.dao.DAO;
 import com.pp.melmontazh.domain.Contact;
@@ -47,11 +48,16 @@ public class WebController {
 	
 	
 	/*---Product---*/
-	@RequestMapping(value="/products", method = RequestMethod.GET)
-	public String showProducts(Model m){
-		m.addAttribute("products", contentService.getAll(Product.class) );
+	@RequestMapping(value="/products", params={"group", "page"}, method = RequestMethod.GET)
+	public String showProducts(Model m, @RequestParam(value = "group") String group, @RequestParam(value = "page") int page){
+		contentService.getItemsForPage(Product.class.getName(), group, 3, page);
+		//m.addAttribute("products", contentService.getAll(Product.class) );
 		return "products";
 	}
+	
+	
+	
+	
 	
 	@RequestMapping(value="/eProduct", method = RequestMethod.GET)
 	public String loadEditorProduct(Model m){
